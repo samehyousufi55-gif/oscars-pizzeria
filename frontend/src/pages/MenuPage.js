@@ -13,20 +13,21 @@ import { ORDER_LINKS } from '../config/orderLinks';
 import menuData from '../data/menu.json';
 
 const CATEGORY_IMAGES = {
-  'Pizza': 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=200',
-  'Calzone': 'https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?auto=format&fit=crop&q=80&w=200',
-  'Kebab Tallerken': 'https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&q=80&w=200',
+  'Pizza': '/images/categories/Pizza kategori.jpg',
+  'Calzone': '/images/categories/Calzone.jpg',
+  'Kebab Tallerken': '/images/categories/Kylling kebab tallerken.jpg',
+  'Tallerken': '/images/categories/KYLLINGSNADDER TALLERKEN.jpg',
   'Kebab Pita': 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=200',
   'Kebab Rull': 'https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&q=80&w=200',
-  'Burger': 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=200',
-  'Burgermeny': 'https://images.unsplash.com/photo-1594212691516-436fba2ba008?auto=format&fit=crop&q=80&w=200',
-  'Pommes frites': 'https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&q=80&w=200',
-  'Salat': 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=200',
+  'Burger': '/images/categories/Cheeseburger Many.jpg',
+  'Burgermeny': '/images/categories/Cheeseburger Many.jpg',
+  'Pommes frites': '/images/categories/Liten pommes frites.jpg',
+  'Salat': '/images/categories/42. Vegetar salat.jpg',
   'Dipper': 'https://images.unsplash.com/photo-1472476449509-f9f30b2c1240?auto=format&fit=crop&q=80&w=200',
   'Barnemeny': 'https://images.unsplash.com/photo-1625938146369-adc83368bda7?auto=format&fit=crop&q=80&w=200',
-  'Drikke 0,5 l': 'https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&q=80&w=200',
-  'Drikke 1,5 L': 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&q=80&w=200',
-  'Energidrikker': 'https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?auto=format&fit=crop&q=80&w=200',
+  'Drikke 0,5 l': '/images/categories/drikke kategoripng.png',
+  'Drikke 1,5 L': '/images/categories/drikke kategoripng.png',
+  'Energidrikker': '/images/categories/drikke kategoripng.png',
   'default': 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&q=80&w=200'
 };
 
