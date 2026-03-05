@@ -25,19 +25,21 @@ export const HomePage = () => {
     const fetchMenu = async () => {
       try {
         const response = await axios.get(`${API}/menu`);
-        setMenu(response.data);
-      } catch (error) {
-        console.error('Error fetching menu:', error);
+        const data = response?.data;
+        setMenu(Array.isArray(data) ? data : []);
+      } catch {
+        setMenu([]);
       }
     };
     fetchMenu();
   }, []);
 
-  const popularItems = menu.length > 0 
+  const menuArray = Array.isArray(menu) ? menu : [];
+  const popularItems = menuArray.length > 0
     ? [
-        menu.find(c => c.name === 'Smash Burger')?.items?.[3],
-        menu.find(c => c.name === 'Italiensk Pizza')?.items?.[0],
-        menu.find(c => c.name === 'Grill/Kebab')?.items?.[7],
+        menuArray.find(c => c.name === 'Smash Burger')?.items?.[3],
+        menuArray.find(c => c.name === 'Italiensk Pizza')?.items?.[0],
+        menuArray.find(c => c.name === 'Grill/Kebab')?.items?.[7],
       ].filter(Boolean)
     : [];
 

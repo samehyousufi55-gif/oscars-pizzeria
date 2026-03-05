@@ -15,7 +15,8 @@ export const MenuPage = () => {
     const fetchMenu = async () => {
       try {
         const response = await axios.get(`${API}/menu`);
-        setMenu(response.data || []);
+        const data = response?.data;
+        setMenu(Array.isArray(data) ? data : []);
       } catch {
         setMenu([]);
       }
@@ -23,12 +24,13 @@ export const MenuPage = () => {
     fetchMenu();
   }, []);
 
-  const categories = menu.map((c) => ({
+  const menuArray = Array.isArray(menu) ? menu : [];
+  const categories = menuArray.map((c) => ({
     name: language === 'no' ? c.name : (c.name_en || c.name),
     key: c.name,
   }));
 
-  const filteredMenu = activeCategory === 'all' ? menu : menu.filter((c) => c.name === activeCategory);
+  const filteredMenu = activeCategory === 'all' ? menuArray : menuArray.filter((c) => c.name === activeCategory);
 
   return (
     <div data-testid="menu-page" className="min-h-screen bg-[#FAFAF8] pt-24 pb-20">
@@ -40,7 +42,7 @@ export const MenuPage = () => {
           <p className="text-gray-500">{language === 'no' ? 'Utforsk vårt utvalg' : 'Explore our selection'}</p>
         </div>
 
-        {menu.length > 0 && categories.length > 1 && (
+        {menuArray.length > 0 && categories.length > 1 && (
           <div className="flex flex-wrap justify-center gap-2 mb-12 scrollbar-hide overflow-x-auto pb-2">
             <button
               onClick={() => setActiveCategory('all')}
@@ -60,7 +62,7 @@ export const MenuPage = () => {
           </div>
         )}
 
-        {menu.length === 0 ? (
+        {menuArray.length === 0 ? (
           <div className="text-center py-16 bg-white rounded-2xl card-shadow">
             <p className="text-gray-500 mb-6">
               {language === 'no' ? 'Menyen lastes fra bestillingstjenesten.' : 'Menu loads from ordering service.'}
@@ -77,7 +79,7 @@ export const MenuPage = () => {
           </div>
         ) : (
           <div className="space-y-12">
-            {filteredMenu.map((category) => (
+            {filteredMenu?.map((category) => (
               <section key={category.name} className="bg-white rounded-2xl card-shadow p-6 md:p-8">
                 <h2 className="font-heading text-2xl md:text-3xl text-gray-900 mb-6">
                   {language === 'no' ? category.name : (category.name_en || category.name)}
