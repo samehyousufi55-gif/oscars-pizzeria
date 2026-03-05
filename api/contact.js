@@ -3,32 +3,36 @@ const { Resend } = require('resend');
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 module.exports = async (req, res) => {
-    // CORS headers
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  // CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-    if (req.method === 'OPTIONS') {
-        return res.status(200).end();
-    }
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
 
-    if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method not allowed' });
-    }
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
-    const { name, email, phone, message } = req.body;
+  const { name, email, phone, message } = req.body;
 
-    if (!name || !email || !message) {
-        return res.status(400).json({ error: 'Name, email and message are required' });
-    }
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: 'Name, email and message are required' });
+  }
 
-    try {
-        await resend.emails.send({
-            from: 'Oscars Pizzeria Kontakt <onboarding@resend.dev>',
-            to: ['post@swiftskillsgroup.com'],
-            replyTo: email,
-            subject: `Ny melding fra ${name} - Oscars Pizzeria`,
-            html: `
+  try {
+    // Resend SDK returnerer { data, error } - vi MÅ sjekke begge
+    const { data, error } = await resend.emails.send({
+      from: 'Oscars Pizzeria <onboarding@resend.dev>',
+      // MERK: Med test-domenet "onboarding@resend.dev" kan du KUN sende til
+      // din egen Resend-konto-e-post. For å sende til andre, verifiser domenet
+      // ditt på resend.com/domains og bytt from til f.eks. noreply@oscarspizzeria.no
+      to: ['delivered@resend.dev'], // Resend test-inbox. Bytt når domenet er verifisert!
+      replyTo: email,
+      subject: `Ny melding fra ${name} - Oscars Pizzeria`,
+      html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #fafaf8; border-radius: 16px; overflow: hidden;">
           <div style="background: #1a1a1a; color: white; padding: 32px; text-align: center;">
             <h1 style="margin: 0; font-size: 24px;">📬 Ny kontaktmelding</h1>
@@ -61,11 +65,19 @@ module.exports = async (req, res) => {
           </div>
         </div>
       `,
-        });
+    });
 
-        return res.status(200).json({ success: true, message: 'Melding sendt!' });
-    } catch (error) {
-        console.error('Resend error:', error);
-        return res.status(500).json({ error: 'Kunne ikke sende melding. Prøv igjen.' });
+    // Sjekk om Resend returnerte en feil (SDK-stil: { data, error })
+    if (error) {
+      console.error('Resend error:', error);
+      return res.status(400).json({
+        error: `Kunne ikke sende e-post: ${error.message || JSON.stringify(error)}`
+      });
     }
+
+    return res.status(200).json({ success: true, message: 'Melding sendt!' });
+  } catch (err) {
+    console.error('Server error:', err);
+    return res.status(500).json({ error: 'Serverfeil. Prøv igjen eller ring oss.' });
+  }
 };
