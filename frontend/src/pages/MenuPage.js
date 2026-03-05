@@ -92,10 +92,8 @@ export const MenuPage = () => {
     return { ...c, items: filteredItems };
   }).filter(c => c.items.length > 0);
 
-  // 2. Filtrer menyen basert på valgt kategori fra meny-pillene
-  const finalMenu = activeCategory === 'all'
-    ? searchProcessedMenu
-    : searchProcessedMenu.filter(c => c.name === activeCategory);
+  // 2. Vi viser ALLTID hele menyen, men scroller til riktig seksjon ved klikk
+  const finalMenu = searchProcessedMenu;
 
   return (
     <div data-testid="menu-page" className="min-h-screen bg-[#FAFAF8] pt-28 pb-24 relative font-sans text-gray-900">
@@ -150,7 +148,10 @@ export const MenuPage = () => {
                     style={{ scrollBehavior: 'smooth' }}
                   >
                     <button
-                      onClick={() => setActiveCategory('all')}
+                      onClick={() => {
+                        setActiveCategory('all');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
                       className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-medium transition-colors border snap-start shrink-0 ${activeCategory === 'all'
                         ? 'bg-[#1a1a1a] text-white border-[#1a1a1a]'
                         : 'bg-white text-gray-600 border-gray-200 hover:border-gray-300 hover:text-gray-900'
@@ -161,7 +162,15 @@ export const MenuPage = () => {
                     {categories.map((cat) => (
                       <button
                         key={cat.key}
-                        onClick={() => setActiveCategory(cat.key)}
+                        onClick={() => {
+                          setActiveCategory(cat.key);
+                          const el = document.getElementById(`category-${cat.key}`);
+                          if (el) {
+                            const yOffset = -150; // Compensates for the sticky header height
+                            const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+                            window.scrollTo({ top: y, behavior: 'smooth' });
+                          }
+                        }}
                         className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-medium transition-colors border snap-start shrink-0 ${activeCategory === cat.key
                           ? 'bg-[#1a1a1a] text-white border-[#1a1a1a]'
                           : 'bg-white text-gray-600 border-gray-200 hover:border-gray-300 hover:text-gray-900'
