@@ -16,7 +16,8 @@
           }
         ],
         "price": null,
-        "image": "/images/products/1.Margrethe.jpg"
+        "image": "/images/products/1.Margrethe.jpg",
+        "ninitoId": "fb20f30d-7653-4ff9-b9ea-98f4d166b2a8"
       },
       {
         "name": "02. Napoli",

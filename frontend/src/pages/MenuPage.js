@@ -46,6 +46,13 @@ export const MenuPage = () => {
 
   const scrollContainerRef = useRef(null);
 
+  const getOrderLink = (item) => {
+    if (item && item.ninitoId) {
+      return `https://order.ninito.com/no/group/oscars-pizzeria/holter?productId=${item.ninitoId}`;
+    }
+    return ORDER_LINKS.ninito;
+  };
+
   useEffect(() => {
     // Simulere en kort loading for visuell effekt av spinneren
     const timer = setTimeout(() => {
@@ -232,7 +239,7 @@ export const MenuPage = () => {
                               setSelectedItem(item);
                             } else {
                               // Hvis den ikke har "sizes" (kun én størrelse/pris), hopp direkte til Ninito-bestilling!
-                              window.open(ORDER_LINKS.ninito, '_blank');
+                              window.open(getOrderLink(item), '_blank');
                             }
                           }}
                         >
@@ -331,7 +338,7 @@ export const MenuPage = () => {
                       <div
                         key={index}
                         className="flex justify-between items-center p-4 border border-gray-200 rounded-xl hover:border-[#1a1a1a] hover:bg-gray-50 transition-all cursor-pointer group"
-                        onClick={() => window.open(ORDER_LINKS.ninito, '_blank')}
+                        onClick={() => window.open(getOrderLink(selectedItem), '_blank')}
                       >
                         <span className="font-medium text-gray-800 group-hover:text-black">{size.name}</span>
                         <span className="font-semibold text-gray-900 bg-white border border-gray-100 px-3 py-1 rounded-lg">
@@ -347,7 +354,7 @@ export const MenuPage = () => {
             {/* Modal Footer / Call to action */}
             <div className="p-6 border-t border-gray-100 bg-gray-50 mt-auto">
               <button
-                onClick={() => window.open(ORDER_LINKS.ninito, '_blank')}
+                onClick={() => window.open(getOrderLink(selectedItem), '_blank')}
                 className="w-full bg-[#1a1a1a] text-white py-3.5 rounded-xl font-medium hover:bg-black transition-colors flex justify-center items-center gap-2 text-lg"
               >
                 Gå til bestilling
