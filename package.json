@@ -1,0 +1,11 @@
+{
+  "name": "smak-kopi",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "fetch-menu": "node scripts/fetch-menu.js"
+  },
+  "dependencies": {
+    "puppeteer": "^24.0.0"
+  }
+}

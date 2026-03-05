@@ -37,9 +37,9 @@ export const HomePage = () => {
   const menuArray = Array.isArray(menu) ? menu : [];
   const popularItems = menuArray.length > 0
     ? [
-        menuArray.find(c => c.name === 'Smash Burger')?.items?.[3],
-        menuArray.find(c => c.name === 'Italiensk Pizza')?.items?.[0],
-        menuArray.find(c => c.name === 'Grill/Kebab')?.items?.[7],
+        menuArray.find(c => c.name === 'Pizza')?.items?.[0],
+        menuArray.find(c => c.name === 'Burger')?.items?.[0],
+        menuArray.find(c => c.name === 'Calzone')?.items?.[0],
       ].filter(Boolean)
     : [];
 
