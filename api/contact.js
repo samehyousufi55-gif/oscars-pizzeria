@@ -25,11 +25,8 @@ module.exports = async (req, res) => {
   try {
     // Resend SDK returnerer { data, error } - vi MÅ sjekke begge
     const { data, error } = await resend.emails.send({
-      from: 'Oscars Pizzeria <onboarding@resend.dev>',
-      // MERK: Med test-domenet "onboarding@resend.dev" kan du KUN sende til
-      // din egen Resend-konto-e-post. For å sende til andre, verifiser domenet
-      // ditt på resend.com/domains og bytt from til f.eks. noreply@oscarspizzeria.no
-      to: ['delivered@resend.dev'], // Resend test-inbox. Bytt når domenet er verifisert!
+      from: 'Oscars Pizzeria <noreply@oscarspizzeria.no>',
+      to: ['post@swiftskillsgroup.com'],
       replyTo: email,
       subject: `Ny melding fra ${name} - Oscars Pizzeria`,
       html: `
