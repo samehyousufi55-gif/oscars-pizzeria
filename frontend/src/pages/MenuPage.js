@@ -21,7 +21,8 @@ export const MenuPage = () => {
     key: c.name,
   }));
 
-  const filteredMenu = activeCategory === 'all' ? menuArray : menuArray.filter((c) => c.name === activeCategory);
+  // Fjernet gammel filtrering slik at kunden alltid ser *hele* menyen!
+  const filteredMenu = menuArray;
 
   return (
     <div data-testid="menu-page" className="min-h-screen bg-[#FAFAF8] pt-24 pb-20 relative">
@@ -36,7 +37,10 @@ export const MenuPage = () => {
         {menuArray.length > 0 && categories.length > 1 && (
           <div className="flex flex-wrap justify-center gap-2 mb-12 scrollbar-hide overflow-x-auto pb-2">
             <button
-              onClick={() => setActiveCategory('all')}
+              onClick={() => {
+                setActiveCategory('all');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
               className={`category-tab ${activeCategory === 'all' ? 'active' : ''}`}
             >
               {t('menu')}
@@ -44,7 +48,15 @@ export const MenuPage = () => {
             {categories.map((cat) => (
               <button
                 key={cat.key}
-                onClick={() => setActiveCategory(cat.key)}
+                onClick={() => {
+                  setActiveCategory(cat.key);
+                  const el = document.getElementById(`category-${cat.key}`);
+                  if (el) {
+                    const yOffset = -120;
+                    const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                  }
+                }}
                 className={`category-tab ${activeCategory === cat.key ? 'active' : ''}`}
               >
                 {cat.name}
@@ -71,7 +83,10 @@ export const MenuPage = () => {
         ) : (
           <div className="space-y-12">
             {filteredMenu?.map((category) => (
-              <section key={category.name} className="bg-white rounded-2xl card-shadow p-6 md:p-8">
+              <section key={category.name} id={`category-${category.name}`} className="bg-white rounded-2xl card-shadow p-6 md:p-8">
+                {category.image && (
+                  <img src={category.image} alt={category.name} className="w-full h-48 md:h-64 object-cover rounded-xl mb-6 shadow-sm" />
+                )}
                 <h2 className="font-heading text-2xl md:text-3xl text-gray-900 mb-6">
                   {language === 'no' ? category.name : (category.name_en || category.name)}
                 </h2>
@@ -79,24 +94,29 @@ export const MenuPage = () => {
                   {(category.items || []).map((item, i) => (
                     <div
                       key={i}
-                      className={`menu-card flex justify-between items-start border-b border-gray-100 pb-4 last:border-0 p-2 md:p-4 rounded-xl transition-all duration-200 ${item.sizes ? 'cursor-pointer hover:bg-orange-50/50 hover:shadow-sm group' : ''}`}
+                      className={`menu-card flex flex-col sm:flex-row justify-between items-start border-b border-gray-100 pb-4 last:border-0 p-2 md:p-4 rounded-xl transition-all duration-200 ${item.sizes ? 'cursor-pointer hover:bg-orange-50/50 hover:shadow-sm group' : ''}`}
                       onClick={() => item.sizes ? setSelectedItem(item) : null}
                     >
-                      <div className="pr-4">
-                        <h3 className={`font-semibold text-gray-900 ${item.sizes ? 'group-hover:text-orange-600 transition-colors' : ''}`}>
-                          {item.name}
-                        </h3>
-                        {item.description && <p className="text-gray-500 text-sm mt-1">{item.description}</p>}
-
-                        {item.sizes && (
-                          <span className="inline-block mt-2 text-xs font-medium bg-gray-100 text-gray-600 px-2 py-1 rounded-md">
-                            Flere størrelser tilgjengelig
-                          </span>
+                      <div className="flex gap-4 md:gap-6 items-start w-full">
+                        {item.image && (
+                          <img src={item.image} alt={item.name} className="w-20 h-20 md:w-24 md:h-24 object-cover rounded-xl flex-shrink-0 shadow-sm" />
                         )}
+                        <div className="flex-1 pr-4">
+                          <h3 className={`font-semibold text-gray-900 ${item.sizes ? 'group-hover:text-orange-600 transition-colors' : ''}`}>
+                            {item.name}
+                          </h3>
+                          {item.description && <p className="text-gray-500 text-sm mt-1">{item.description}</p>}
+
+                          {item.sizes && (
+                            <span className="inline-block mt-2 text-xs font-medium bg-gray-100 text-gray-600 px-2 py-1 rounded-md">
+                              Flere størrelser tilgjengelig
+                            </span>
+                          )}
+                        </div>
+                        <span className="price-tag text-lg font-bold text-gray-900 whitespace-nowrap mt-1 self-start">
+                          {item.sizes ? `fra ${Math.min(...item.sizes.map((s) => s.price))} kr` : `${item.price} kr`}
+                        </span>
                       </div>
-                      <span className="price-tag text-lg font-bold text-gray-900 whitespace-nowrap mt-1">
-                        {item.sizes ? `fra ${Math.min(...item.sizes.map((s) => s.price))} kr` : `${item.price} kr`}
-                      </span>
                     </div>
                   ))}
                 </div>
