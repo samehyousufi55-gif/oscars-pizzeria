@@ -157,11 +157,55 @@
     "items": [
       {
         "name": "Bare Burger",
-        "description": "Burger med tomat, agurk, løk og salat."
+        "description": "Burger med tomat, agurk, løk og salat.",
+        "sizes": [
+          {
+            "name": "100g",
+            "price": 90
+          },
+          {
+            "name": "160g",
+            "price": 110
+          },
+          {
+            "name": "190g",
+            "price": 115
+          },
+          {
+            "name": "Hjemmelaget 200g",
+            "price": 120
+          },
+          {
+            "name": "250g",
+            "price": 130
+          }
+        ]
       },
       {
         "name": "Cheeseburger",
-        "description": "Burger med tomat, agurk, løk, salat og ost."
+        "description": "Burger med tomat, agurk, løk, salat og ost.",
+        "sizes": [
+          {
+            "name": "100g",
+            "price": 95
+          },
+          {
+            "name": "160g",
+            "price": 115
+          },
+          {
+            "name": "190g",
+            "price": 120
+          },
+          {
+            "name": "Hjemmelaget 200g",
+            "price": 125
+          },
+          {
+            "name": "250g",
+            "price": 140
+          }
+        ]
       },
       {
         "name": "Kyllingburger",
@@ -179,11 +223,55 @@
     "items": [
       {
         "name": "Burgermeny",
-        "description": "Burger med tomat, agurk, løk, salat og pommes frites."
+        "description": "Burger med tomat, agurk, løk, salat og pommes frites.",
+        "sizes": [
+          {
+            "name": "100g",
+            "price": 150
+          },
+          {
+            "name": "160g",
+            "price": 170
+          },
+          {
+            "name": "190g",
+            "price": 175
+          },
+          {
+            "name": "Hjemmelaget 200g",
+            "price": 180
+          },
+          {
+            "name": "250g",
+            "price": 190
+          }
+        ]
       },
       {
         "name": "Cheeseburger Meny",
-        "description": "Burger med tomat, agurk, løk, salat, ost og pommes frites."
+        "description": "Burger med tomat, agurk, løk, salat, ost og pommes frites.",
+        "sizes": [
+          {
+            "name": "100g",
+            "price": 170
+          },
+          {
+            "name": "160g",
+            "price": 190
+          },
+          {
+            "name": "190g",
+            "price": 195
+          },
+          {
+            "name": "Hjemmelaget 200g",
+            "price": 200
+          },
+          {
+            "name": "250g",
+            "price": 210
+          }
+        ]
       }
     ]
   },
@@ -269,15 +357,81 @@
     "items": [
       {
         "name": "Kyllingnuggets",
-        "description": "Sprø og panerte biter av kyllingkjøtt som friteres til de er gylne."
+        "description": "Sprø og panerte biter av kyllingkjøtt som friteres til de er gylne.",
+        "sizes": [
+          {
+            "name": "3 stk",
+            "price": 33
+          },
+          {
+            "name": "5 stk",
+            "price": 55
+          },
+          {
+            "name": "8 stk",
+            "price": 88
+          },
+          {
+            "name": "10 stk",
+            "price": 110
+          },
+          {
+            "name": "15 stk",
+            "price": 165
+          },
+          {
+            "name": "20 stk",
+            "price": 220
+          }
+        ]
       },
       {
         "name": "Løkringer",
-        "description": "Klassisk ringer av løk som er dyppet i en krydret røre og fritert."
+        "description": "Klassisk ringer av løk som er dyppet i en krydret røre og fritert.",
+        "sizes": [
+          {
+            "name": "3 stk",
+            "price": 24
+          },
+          {
+            "name": "6 stk",
+            "price": 48
+          },
+          {
+            "name": "10 stk",
+            "price": 80
+          },
+          {
+            "name": "15 stk",
+            "price": 120
+          },
+          {
+            "name": "20 stk",
+            "price": 160
+          }
+        ]
       },
       {
         "name": "Mozzarella Sticks",
-        "description": "Staver av mozzarellaost som er panert og fritert slik at osten blir smeltet og trådete inni."
+        "description": "Staver av mozzarellaost som er panert og fritert slik at osten blir smeltet og trådete inni.",
+        "sizes": [
+          {
+            "name": "3 stk",
+            "price": 39
+          },
+          {
+            "name": "6 stk",
+            "price": 78
+          },
+          {
+            "name": "10 stk",
+            "price": 130
+          },
+          {
+            "name": "15 stk",
+            "price": 195
+          }
+        ]
       },
       {
         "name": "Pommes Frites",

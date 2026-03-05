@@ -1,0 +1,391 @@
+{
+    "restaurant": {
+        "name": "Oscars Pizzeria",
+        "address": "Tulipanvegen 1, 2034 Holter, Norway",
+        "phone": "+47 47 73 73 47",
+        "website": "https://oscarspizzeria.no",
+        "orderUrl": "https://order.ninito.com/no/group/oscars-pizzeria/holter"
+    },
+    "menu": {
+        "salat": [
+            {
+                "name": "Vegetar Salat",
+                "price": 155,
+                "description": "Salat med fersk grønnsaker, mozzarella ost og hvitløksaus."
+            },
+            {
+                "name": "Kebab Salat",
+                "price": 155,
+                "description": "Salat med kebabkjøtt, fersk grønnsaker og hvitløksaus."
+            },
+            {
+                "name": "Kylling Salat",
+                "price": 155,
+                "description": "Salat med marinert kyllingfilet, fersk grønnsaker og hvitløksaus."
+            }
+        ],
+        "pizza": [
+            {
+                "nr": 1,
+                "name": "Margherita",
+                "price": 145,
+                "description": "Tomatsaus og ost."
+            },
+            {
+                "nr": 2,
+                "name": "Napoli",
+                "price": 155,
+                "description": "Skinke, tomatsaus og ost."
+            },
+            {
+                "nr": 3,
+                "name": "Pepperoni",
+                "price": 160,
+                "description": "Pepperoni, tomatsaus og ost."
+            },
+            {
+                "nr": 4,
+                "name": "Capri",
+                "price": 165,
+                "description": "Skinke, sjampinjong, tomatsaus og ost."
+            },
+            {
+                "nr": 5,
+                "name": "Hawaii",
+                "price": 165,
+                "description": "Skinke, ananas, tomatsaus og ost."
+            },
+            {
+                "nr": 6,
+                "name": "Hazel",
+                "price": 175,
+                "description": "Skinke, pepperoni, løk, paprika, tomatskiver, oliven, sjampinjong, tomatsaus og ost."
+            },
+            {
+                "nr": 7,
+                "name": "Dallas",
+                "price": 175,
+                "description": "Skinke, pepperoni, kjøttdeig, ananas, tomatsaus og ost."
+            },
+            {
+                "nr": 8,
+                "name": "Holter Spesial",
+                "price": 175,
+                "description": "Skinke, pepperoni, bacon, løk, tomatsaus og ost."
+            },
+            {
+                "nr": 9,
+                "name": "Vegetarpizza",
+                "price": 175,
+                "description": "Paprika, sjampinjong, løk, tomat, oliven, mais, ruccola, tomatsaus og ost."
+            },
+            {
+                "nr": 10,
+                "name": "India",
+                "price": 185,
+                "description": "Marinert kyllingfilet, rødløk, mais, tomatsaus og ost."
+            },
+            {
+                "nr": 11,
+                "name": "Kylling Pizza",
+                "price": 185,
+                "description": "Marinert kyllingfilet, mais, ananas, paprika, løk, tomatsaus og ost."
+            },
+            {
+                "nr": 12,
+                "name": "Kebab Pizza",
+                "price": 185,
+                "description": "Kebabkjøtt, sjampinjong, løk, pommes frites, tomatsaus og ost."
+            },
+            {
+                "nr": 13,
+                "name": "Mix Pizza",
+                "price": 210,
+                "description": "Biff, skinke, pepperoni, bacon, kjøttdeig, kebabkjøtt, marinert kylling, tomatsaus og ost."
+            },
+            {
+                "nr": 14,
+                "name": "Mardin",
+                "price": 205,
+                "description": "Biff, pepperoni, kjøttdeig, paprika, sjampinjong, tomatsaus og ost."
+            },
+            {
+                "nr": 15,
+                "name": "Oscars Special",
+                "price": 205,
+                "description": "Biff, skinke, bacon, kjøttdeig, paprika, løk, sjampinjong, jalapeño, oliven, tomatsaus og ost."
+            },
+            {
+                "nr": 16,
+                "name": "Tiger",
+                "price": 205,
+                "description": "Biff, bacon, skinke, kjøttdeig, pepperoni, kebabkjøtt, løk, tomatsaus og ost."
+            },
+            {
+                "nr": 17,
+                "name": "Rhodos",
+                "price": 205,
+                "description": "Indrefilet av svin, pepperoni, skinke, ruccola, tomatsaus og ost."
+            },
+            {
+                "nr": 18,
+                "name": "Hellas",
+                "price": 205,
+                "description": "Skinke, kjøttdeig, kebabkjøtt, pepperoni, løk, oliven, ruccola, jalapeño, tomatsaus og ost."
+            },
+            {
+                "nr": 19,
+                "name": "Tacopizza",
+                "price": 195,
+                "description": "Kjøttdeig, løk, paprika, jalapeño, tortilla chips, tomatsaus og ost."
+            },
+            {
+                "nr": 20,
+                "name": "Kombiner Din Egen Pizza",
+                "price": 220,
+                "description": "Valgfritt innhold."
+            },
+            {
+                "nr": 21,
+                "name": "Valgfri Fifti Fifti",
+                "price": 220,
+                "description": "Bland to forskjellige pizzaer."
+            }
+        ],
+        "favorittpizza": [
+            {
+                "name": "Thomas Spesial",
+                "price": 199,
+                "description": "Pizza med tunfisk, løk, sjampinjong, paprika, tomatsaus og ost. Skapt av en av restaurantens faste kunder."
+            }
+        ],
+        "calzone": [
+            {
+                "nr": 1,
+                "name": "Calzone m/ Skinke",
+                "price": 165,
+                "description": "Skinke, tomatsaus og ost."
+            },
+            {
+                "nr": 2,
+                "name": "Calzone Hawaii",
+                "price": 170,
+                "description": "Skinke, ananas, tomatsaus og ost."
+            },
+            {
+                "nr": 3,
+                "name": "Calzone m/ Kebab",
+                "price": 195,
+                "description": "Kebabkjøtt, løk, sjampinjong, tomatsaus og ost."
+            },
+            {
+                "nr": 4,
+                "name": "Biff Calzone",
+                "price": 195,
+                "description": "Biff, skinke, løk, tomatsaus og ost."
+            },
+            {
+                "nr": 5,
+                "name": "Mix Calzone",
+                "price": 220,
+                "description": "Biff, kylling, kebabkjøtt, skinke, pepperoni og tomatsaus."
+            },
+            {
+                "nr": 6,
+                "name": "Calzone Pepperoni",
+                "price": 189,
+                "description": "Pepperoni, tomatsaus og ost."
+            },
+            {
+                "nr": 7,
+                "name": "Kombiner Din Egen Calzone",
+                "price": 169,
+                "description": "Valgfritt innhold."
+            }
+        ],
+        "burger": [
+            {
+                "name": "Bare Burger",
+                "price": 90,
+                "priceMenu": 150,
+                "description": "Med tomat, agurk, løk og salat. Meny inkluderer pommes frites."
+            },
+            {
+                "name": "Cheeseburger",
+                "price": 95,
+                "priceMenu": 170,
+                "description": "Med tomat, agurk, løk, salat og ost. Meny inkluderer pommes frites."
+            },
+            {
+                "name": "Kyllingburger",
+                "price": 105,
+                "description": "Med tomat, agurk, løk og salat."
+            },
+            {
+                "name": "Cheeseburger m/ Kylling",
+                "price": 159,
+                "description": "Med tomat, agurk, løk, salat og ost."
+            }
+        ],
+        "barnemeny": [
+            {
+                "name": "Barne Skinke Pizza",
+                "price": 105,
+                "description": "Barnepizza med skinke."
+            },
+            {
+                "name": "Barne Pepperoni Pizza",
+                "price": 105,
+                "description": "Barnepizza med pepperoni."
+            },
+            {
+                "name": "Barne Margherita",
+                "price": 95,
+                "description": "Barnepizza med tomatsaus og ost."
+            },
+            {
+                "name": "Barne Pølse",
+                "price": 105,
+                "description": "Wienerpølse med pommes frites."
+            },
+            {
+                "name": "Barne Kyllingnuggets",
+                "price": 105,
+                "description": "5 stk med pommes frites og salat."
+            }
+        ],
+        "kebab_og_tallerken": [
+            {
+                "name": "Kebabtallerken",
+                "price": 189,
+                "description": "Serveres med pommes frites, salat og valgfri saus."
+            },
+            {
+                "name": "Kyllingkebabtallerken",
+                "price": 199,
+                "description": "Serveres med pommes frites, salat og valgfri saus."
+            },
+            {
+                "name": "Kebabrull Spesial",
+                "price": 189,
+                "description": "I hjemmelaget lefse med pommes frites, salat og valgfri saus."
+            },
+            {
+                "name": "Kyllingkebabrull Spesial",
+                "price": 199,
+                "description": "I hjemmelaget lefse med pommes frites, salat og valgfri saus."
+            },
+            {
+                "name": "Løvstek Tallerken",
+                "price": 160,
+                "description": "Med pommes frites, salat og bearnaisesaus."
+            },
+            {
+                "name": "Biffsnadder Tallerken",
+                "price": 205,
+                "description": "Med stekte grønnsaker, pommes frites, salat og bearnaisesaus."
+            },
+            {
+                "name": "Kyllingsnadder Tallerken",
+                "price": 205,
+                "description": "Med stekte grønnsaker, pommes frites, salat og bearnaisesaus."
+            },
+            {
+                "name": "Kyllingnuggets Tallerken",
+                "price": 175,
+                "description": "10 stk med pommes frites, salat og søt chilisaus."
+            }
+        ],
+        "tilbehor": [
+            {
+                "name": "Kyllingnuggets",
+                "price": 33,
+                "description": "Tilbehør."
+            },
+            {
+                "name": "Løkringer",
+                "price": 24,
+                "description": "Tilbehør."
+            },
+            {
+                "name": "Mozzarella Sticks",
+                "price": 39,
+                "description": "Tilbehør."
+            },
+            {
+                "name": "Pommes Frites",
+                "price": 55,
+                "description": "Tilbehør."
+            }
+        ],
+        "dippere": [
+            {
+                "name": "Bearnaisesaus",
+                "price": 25,
+                "description": "Dipper."
+            },
+            {
+                "name": "Sterk saus",
+                "price": 25,
+                "description": "Dipper."
+            },
+            {
+                "name": "Hvitløksaus",
+                "price": 25,
+                "description": "Dipper."
+            },
+            {
+                "name": "Ketchup",
+                "price": 25,
+                "description": "Dipper."
+            },
+            {
+                "name": "Mild saus",
+                "price": 25,
+                "description": "Dipper."
+            },
+            {
+                "name": "Medium saus",
+                "price": 25,
+                "description": "Dipper."
+            }
+        ],
+        "drikke": [
+            {
+                "name": "Coca-Cola",
+                "price": 40,
+                "description": "Mineralvann."
+            },
+            {
+                "name": "Solo",
+                "price": 40,
+                "description": "Mineralvann."
+            },
+            {
+                "name": "Fanta",
+                "price": 40,
+                "description": "Mineralvann."
+            },
+            {
+                "name": "Urge",
+                "price": 40,
+                "description": "Mineralvann."
+            },
+            {
+                "name": "Pepsi Max",
+                "price": 40,
+                "description": "Mineralvann."
+            },
+            {
+                "name": "Monster Energidrikk",
+                "price": 45,
+                "description": "Energidrikk."
+            },
+            {
+                "name": "Red Bull",
+                "price": 45,
+                "description": "Energidrikk."
+            }
+        ]
+    }
+}
