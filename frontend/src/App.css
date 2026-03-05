@@ -1,5 +1,10 @@
 /* Oscars Pizzeria - Black & White Theme */
 
+/* Logo: gjør svart bakgrunn gjennomsiktig (screen = svart viser gjennom) */
+.logo-transparent {
+  mix-blend-mode: screen;
+}
+
 .App {
   min-height: 100vh;
   background-color: #FAFAF8;
