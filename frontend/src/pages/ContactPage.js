@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Clock, Send, Star, Facebook } from 'lucide-react';
+import { MapPin, Phone, Clock, Send, Star, Facebook, Instagram } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
@@ -107,10 +107,22 @@ export const ContactPage = () => {
                 <h3 className="font-semibold text-gray-900 mb-1">{language === 'no' ? 'Telefon' : 'Phone'}</h3>
                 <p className="text-gray-500 text-sm">+47 47 73 73 47</p>
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61567373073607" target="_blank" rel="noopener noreferrer" 
+              <a href="https://www.facebook.com/oscarspizzeria.no" target="_blank" rel="noopener noreferrer" 
                 className="bg-white rounded-2xl p-6 card-shadow card-hover">
                 <Facebook className="w-8 h-8 text-gray-800 mb-3" />
                 <h3 className="font-semibold text-gray-900 mb-1">Facebook</h3>
+                <p className="text-gray-500 text-sm">{language === 'no' ? 'Følg oss' : 'Follow us'}</p>
+              </a>
+              <a href="https://www.instagram.com/oscarspizzeria" target="_blank" rel="noopener noreferrer" 
+                className="bg-white rounded-2xl p-6 card-shadow card-hover">
+                <Instagram className="w-8 h-8 text-gray-800 mb-3" />
+                <h3 className="font-semibold text-gray-900 mb-1">Instagram</h3>
+                <p className="text-gray-500 text-sm">{language === 'no' ? 'Følg oss' : 'Follow us'}</p>
+              </a>
+              <a href="https://www.tiktok.com/@oscars.pizzeria" target="_blank" rel="noopener noreferrer" 
+                className="bg-white rounded-2xl p-6 card-shadow card-hover">
+                <span className="text-3xl">♪</span>
+                <h3 className="font-semibold text-gray-900 mb-1">TikTok</h3>
                 <p className="text-gray-500 text-sm">{language === 'no' ? 'Følg oss' : 'Follow us'}</p>
               </a>
               <div className="bg-white rounded-2xl p-6 card-shadow">
@@ -136,7 +148,7 @@ export const ContactPage = () => {
 
             <div className="rounded-2xl overflow-hidden shadow-lg h-64">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.0!2d11.17!3d60.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNjDCsDA3JzEyLjAiTiAxMcKwMTAnMTIuMCJF!5e0!3m2!1sno!2sno"
+                src="https://www.google.com/maps?q=Tulipanvegen+1,+2034+Holter,+Norway&z=17&output=embed"
                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade" title="Location" data-testid="google-map-embed"
               />

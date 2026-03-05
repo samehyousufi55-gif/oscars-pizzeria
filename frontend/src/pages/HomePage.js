@@ -6,7 +6,7 @@ import axios from 'axios';
 import { API } from '../config/api';
 
 const LOGO_URL = "/oscars-pizzeria-logo.png";
-const HERO_BG = "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1920&q=80";
+const HERO_BG = "/hero-food-bg.png";
 const BURGER_IMG = "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80";
 const PIZZA_IMG = "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80";
 const KEBAB_IMG = "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=600&q=80";

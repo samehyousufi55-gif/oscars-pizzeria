@@ -121,11 +121,15 @@ export const AboutPage = () => {
           
           <div data-testid="map-embed" className="rounded-2xl overflow-hidden shadow-lg h-80">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.0!2d11.17!3d60.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNjDCsDA3JzEyLjAiTiAxMcKwMTAnMTIuMCJF!5e0!3m2!1sno!2sno"
+              src="https://www.google.com/maps?q=Tulipanvegen+1,+2034+Holter,+Norway&z=17&output=embed"
               width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade" title="Location"
+              referrerPolicy="no-referrer-when-downgrade" title="Oscars Pizzeria - Tulipanvegen 1, 2034 Holter"
             />
           </div>
+          <a href="https://www.google.com/maps/search/Tulipanvegen+1+2034+Holter" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-4 text-gray-600 hover:text-gray-900">
+            <MapPin className="w-4 h-4" />
+            <span>Tulipanvegen 1, 2034 Holter</span>
+          </a>
         </div>
       </section>
     </div>

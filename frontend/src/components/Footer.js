@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Clock, Facebook, Star } from 'lucide-react';
+import { MapPin, Phone, Clock, Facebook, Instagram, Star } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 const LOGO_URL = "/oscars-pizzeria-logo.png";
@@ -48,10 +48,20 @@ export const Footer = () => {
                 <Phone className="w-5 h-5 flex-shrink-0" />
                 <span>+47 47 73 73 47</span>
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61567373073607" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.facebook.com/oscarspizzeria.no" target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors text-sm">
                 <Facebook className="w-5 h-5 flex-shrink-0" />
                 <span>Facebook</span>
+              </a>
+              <a href="https://www.instagram.com/oscarspizzeria" target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors text-sm">
+                <Instagram className="w-5 h-5 flex-shrink-0" />
+                <span>Instagram</span>
+              </a>
+              <a href="https://www.tiktok.com/@oscars.pizzeria" target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors text-sm">
+                <span className="text-lg">♪</span>
+                <span>TikTok</span>
               </a>
             </div>
           </div>
