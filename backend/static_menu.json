@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Pizza",
+    "name_en": "Pizza",
+    "items": [
+      {"name": "Margherita", "description": "Tomatsaus, mozzarella, basilikum", "price": 149},
+      {"name": "Pepperoni", "description": "Tomatsaus, mozzarella, pepperoni", "price": 159},
+      {"name": "Kebab Pizza", "description": "Tomatsaus, mozzarella, kebab, løk", "price": 169}
+    ]
+  },
+  {
+    "name": "Burger",
+    "name_en": "Burger",
+    "items": [
+      {"name": "Oscars Burger", "description": "Bacon, ost, salat, tomat", "price": 129},
+      {"name": "Cheeseburger", "description": "Klassisk cheeseburger", "price": 119}
+    ]
+  },
+  {
+    "name": "Kebab",
+    "name_en": "Kebab",
+    "items": [
+      {"name": "Kebab i brød", "description": "Kebab med brød, salat og dressing", "price": 99},
+      {"name": "Kebabtallerken", "description": "Kebab med pommes og salat", "price": 129}
+    ]
+  }
+]
