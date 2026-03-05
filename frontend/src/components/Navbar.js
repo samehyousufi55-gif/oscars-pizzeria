@@ -39,7 +39,7 @@ export const Navbar = () => {
             <img 
               src={LOGO_URL} 
               alt="Oscars Pizzeria" 
-              className="h-14 w-auto logo-transparent"
+              className="h-14 w-auto"
             />
           </Link>
 

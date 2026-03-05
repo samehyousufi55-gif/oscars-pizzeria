@@ -24,7 +24,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="space-y-4">
             <Link to="/" className="inline-block">
-              <img src={LOGO_URL} alt="Oscars Pizzeria" className="h-20 w-auto logo-transparent" />
+              <img src={LOGO_URL} alt="Oscars Pizzeria" className="h-20 w-auto" />
             </Link>
             <p className="text-gray-400 text-sm">Pizza & Grill</p>
             <div className="flex items-center gap-2">

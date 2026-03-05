@@ -56,7 +56,7 @@ export const HomePage = () => {
           <div className="max-w-2xl">
             {/* Logo in Hero */}
             <div className="mb-8 opacity-0 animate-fade-in">
-              <img src={LOGO_URL} alt="Oscars Pizzeria" className="h-24 md:h-32 w-auto logo-transparent" />
+              <img src={LOGO_URL} alt="Oscars Pizzeria" className="h-24 md:h-32 w-auto" />
             </div>
 
             <div className="flex items-center gap-2 mb-4 opacity-0 animate-fade-in animation-delay-100">

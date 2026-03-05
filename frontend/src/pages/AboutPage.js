@@ -25,7 +25,7 @@ export const AboutPage = () => {
         </div>
         
         <div className="relative z-10 container mx-auto px-4 md:px-8 text-center">
-          <img src={LOGO_URL} alt="Oscars Pizzeria" className="h-24 w-auto mx-auto mb-6 logo-transparent" />
+          <img src={LOGO_URL} alt="Oscars Pizzeria" className="h-24 w-auto mx-auto mb-6" />
           <h1 data-testid="about-title" className="font-heading text-4xl md:text-6xl text-white mb-4">
             {t('aboutTitle')}
           </h1>
