@@ -6,6 +6,7 @@
     "fetch-menu": "node scripts/fetch-menu.js"
   },
   "dependencies": {
-    "puppeteer": "^24.0.0"
+    "puppeteer": "^24.0.0",
+    "xlsx": "^0.18.5"
   }
 }

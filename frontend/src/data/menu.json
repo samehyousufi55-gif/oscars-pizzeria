@@ -1,163 +1,565 @@
 [
   {
-    "name": "Salat",
-    "name_en": "Salat",
-    "items": [
-      {
-        "name": "Vegetar Salat",
-        "description": "Salat med fersk grønnsaker, mozzarella ost og hvitløksaus."
-      },
-      {
-        "name": "Kebab Salat",
-        "description": "Salat med kebabkjøtt, fersk grønnsaker og hvitløksaus."
-      },
-      {
-        "name": "Kylling Salat",
-        "description": "Salat med marinert kyllingfile, fersk grønnsaker og hvitløksaus."
-      }
-    ]
-  },
-  {
     "name": "Pizza",
-    "name_en": "Pizza",
     "items": [
       {
-        "name": "Margherita",
-        "description": "Pizza med tomatsaus og ost."
+        "name": "01. Margarita",
+        "description": "Tomatsaus og ost.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 145
+          },
+          {
+            "name": "Stor",
+            "price": 210
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Napoli",
-        "description": "Pizza med skinke, tomatsaus og ost."
+        "name": "02. Napoli",
+        "description": "Tomatsaus, ost og skinke.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 155
+          },
+          {
+            "name": "Stor",
+            "price": 220
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Pepperoni",
-        "description": "Pizza med pepperoni, tomatsaus og ost."
+        "name": "03. Pepperoni",
+        "description": "Tomatsaus, ost og pepperoni.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 160
+          },
+          {
+            "name": "Stor",
+            "price": 225
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Capri",
-        "description": "Pizza med skinke, sjampinjong, tomatsaus og ost."
+        "name": "04. Capri",
+        "description": "Tomatsaus, ost, skinke og sjampinong.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 165
+          },
+          {
+            "name": "Stor",
+            "price": 230
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Hawaii",
-        "description": "Pizza med skinke, ananas, tomatsaus og ost."
+        "name": "05. Hawaii",
+        "description": "Tomatsaus, ost, skinke og ananas.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 165
+          },
+          {
+            "name": "Stor",
+            "price": 230
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Hazel",
-        "description": "Pizza med skinke, pepperoni, løk, paprika, tomatskiver, oliven, sjampinjong, tomatsaus og ost."
+        "name": "06. Hazel",
+        "description": "Tomatsaus, ost, skinke, pepperoni, løk, paprika, tomatskiver, oliven og sjampinjong.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 175
+          },
+          {
+            "name": "Stor",
+            "price": 270
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Dallas",
-        "description": "Pizza med skinke, pepperoni, kjøttdeig, ananas, tomatsaus og ost."
+        "name": "07. Dallas",
+        "description": "Tomatsaus, ost, skinke, pepperoni, kjøttdeig og ananas.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 175
+          },
+          {
+            "name": "Stor",
+            "price": 275
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Holter Spesial",
-        "description": "Pizza med skinke, pepperoni, bacon, løk, tomatsaus og ost."
+        "name": "08. Holter Special",
+        "description": "Tomatsaus, ost, skinke, pepperoni, bacon og løk.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 175
+          },
+          {
+            "name": "Stor",
+            "price": 275
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Vegetarpizza",
-        "description": "Pizza med paprika, sjampinjong, løk, tomat, oliven, mais, ruccola, tomatsaus og ost."
+        "name": "09. Vegetar Pizza",
+        "description": "Tomatsaus, ost, paprika, sjampinjong, løk, tomat, oliven, mais og ruccola.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 175
+          },
+          {
+            "name": "Stor",
+            "price": 275
+          }
+        ],
+        "price": null
       },
       {
-        "name": "India",
-        "description": "Pizza med marinert kyllingfilet, rødløk, mais, tomatsaus og ost."
+        "name": "10. India",
+        "description": "Tomatsaus, ost, marinertkyllingfilet, rødløk og mais.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 185
+          },
+          {
+            "name": "Stor",
+            "price": 285
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Kylling Pizza",
-        "description": "Pizza med marinert kyllingfilet, mais, ananas, paprika, løk, tomatsaus og ost."
+        "name": "11. Kylling Pizza",
+        "description": "Tomatsaus, ost, marinert kyllingfilet, mais, ananas, paprika, løk.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 185
+          },
+          {
+            "name": "Stor",
+            "price": 285
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Kebab Pizza",
-        "description": "Pizza med kebabkjøtt, sjampinjong, løk, pommes frites, tomatsaus og ost."
+        "name": "12. Kebab Pizza",
+        "description": "Tomatsaus, ost, kebabkjøtt, sjampinjong, løk og pommesfrites",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 185
+          },
+          {
+            "name": "Stor",
+            "price": 290
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Mix Pizza",
-        "description": "Pizza med biff, skinke, pepperoni, bacon, kjøttdeig, kebabkjøtt, marinert kylling, tomatsaus og ost."
+        "name": "13. Mix Pizza",
+        "description": "Tomatsaus, ost, biff, skinke, pepperoni, bacon, kjøttdeig, kebabkjøtt, marinert kylling.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 210
+          },
+          {
+            "name": "Stor",
+            "price": 320
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Mardin",
-        "description": "Pizza med biff, pepperoni, kjøttdeig, paprika, sjampinjong, tomatsaus og ost."
+        "name": "14. Mardin",
+        "description": "Tomatsaus, ost, biff, pepperoni, kjøttdeig, paprika og sjampinjong.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 205
+          },
+          {
+            "name": "Stor",
+            "price": 305
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Oscars Special",
-        "description": "Pizza med biff, skinke, bacon, kjøttdeig, paprika, løk, sjampinjong, jalapeño, oliven, tomatsaus og ost."
+        "name": "15. Oscars Special",
+        "description": "Tomatsaus, ost, biff, skinke, bacon, kjøttdeig, paprika, løk, sjampinjong, jalepenos, oliven",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 205
+          },
+          {
+            "name": "Stor",
+            "price": 305
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Tiger",
-        "description": "Pizza med biff, bacon, skinke, kjøttdeig, pepperoni, kebabkjøtt, løk, tomatsaus og ost."
+        "name": "16. Tiger",
+        "description": "Tomatsaus, ost, biff, bacon, skinke, kjøttdeig, pepperoni, kebabkjøtt og løk",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 205
+          },
+          {
+            "name": "Stor",
+            "price": 305
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Rhodos",
-        "description": "Pizza med indrefilet av svin, pepperoni, skinke, ruccola, tomatsaus og ost."
+        "name": "17. Rhodos",
+        "description": "Tomatsaus, ost, indrefilet av svin, pepperoni, skinke og ruccola.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 205
+          },
+          {
+            "name": "Stor",
+            "price": 305
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Hellas",
-        "description": "Pizza med skinke, kjøttdeig, kebabkjøtt, pepperoni, løk, oliven, ruccola, jalapeño, tomatsaus og ost."
+        "name": "18. Hellas",
+        "description": "Tomatsaus, ost, skinke, kjøttdeig, kebabkjøtt, pepperoni, løk oliven, ruccola og jalepenos.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 205
+          },
+          {
+            "name": "Stor",
+            "price": 295
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Tacopizza",
-        "description": "Pizza med kjøttdeig, løk, paprika, jalapeno, tortilla chips, tomatsaus og ost."
+        "name": "19. Tacopizza",
+        "description": "Tomatsaus, ost, kjøttdeig, løk, paprika og jalapeno, tortilla chips.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 195
+          },
+          {
+            "name": "Stor",
+            "price": 295
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Kombiner Din Egen Pizza",
-        "description": "Valgfritt innhold."
+        "name": "20. Kombiner din egen Pizza",
+        "description": "Valgfritt innhold",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 220
+          },
+          {
+            "name": "Stor",
+            "price": 320
+          }
+        ],
+        "price": null
       },
       {
-        "name": "Valgfri Fifti Fifti",
-        "description": "Bland to forskjellige pizzaer."
-      }
-    ]
-  },
-  {
-    "name": "Favorittpizza",
-    "name_en": "Favorittpizza",
-    "items": [
+        "name": "20A. Valgfri Fifti Fifti",
+        "description": "",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 220
+          },
+          {
+            "name": "Stor",
+            "price": 320
+          }
+        ],
+        "price": null
+      },
       {
         "name": "Thomas Spesial",
-        "description": "Pizza med tunfisk, løk, sjampinjong, paprika, tomatsaus og ost. Skapt av en av våre faste kunder en perfekt balansert og smakfull favoritt."
+        "description": "Tomatsaus, ost, løk, sjampinjong, paprika og tunfisk. Skapt av en av våre faste kunder en perfekt balansert og smakfull favoritt.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 199
+          },
+          {
+            "name": "Stor",
+            "price": 289
+          }
+        ],
+        "price": null
       }
     ]
   },
   {
     "name": "Calzone",
-    "name_en": "Calzone",
     "items": [
       {
-        "name": "Calzone m/ Skinke",
-        "description": "Pizza med skinke, tomatsaus og ost."
+        "name": "21. Calzone Med Skinke",
+        "description": "Tomatsaus, ost, skinke.",
+        "price": 165
       },
       {
-        "name": "Calzone Hawaii",
-        "description": "Pizza med skinke, ananas, tomatsaus og ost."
+        "name": "22. Calzone Hawaii",
+        "description": "Tomatsaus, ost, skinke, ananas.",
+        "price": 170
       },
       {
-        "name": "Calzone m/ Kebab",
-        "description": "Pizza med kebabkjøtt, løk, sjampinjong, tomatsaus og ost."
+        "name": "23. Calzone Med Kebab",
+        "description": "Tomatsaus, ost, løk, sjampinjong, og kebabkjøtt.",
+        "price": 195
       },
       {
-        "name": "Biff Calzone",
-        "description": "Pizza med biff, skinke, løk, tomatsaus og ost."
+        "name": "24. Biff Calzone",
+        "description": "Tomatsaus, ost, biff, skinke og løk.",
+        "price": 195
       },
       {
-        "name": "Mix Calzone",
-        "description": "Pizza med biff, kylling, kebabkjøtt, skinke, pepperoni og tomatsaus."
+        "name": "25. Mix Calzone",
+        "description": "Tomatsaus, skinke, pepperoni, biff, kylling og kebabkjøtt.",
+        "price": 220
       },
       {
         "name": "Calzone Pepperoni",
-        "description": "Pizza med pepperoni, tomatsaus og ost."
+        "description": "Tomatsaus, ost og pepperoni",
+        "price": 189
       },
       {
-        "name": "Kombiner Din Egen Calzone",
-        "description": "Legg til det du liker."
+        "name": "Kombiner din egen Calzone",
+        "description": "Startpris 169 kr – legg til det du liker!",
+        "price": 169
+      }
+    ]
+  },
+  {
+    "name": "Kebab Tallerken",
+    "items": [
+      {
+        "name": "30. Kylling Kebab Tallerken",
+        "description": "Kylling kebab, pommes, salat, valgfri saus.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 199
+          },
+          {
+            "name": "Stor",
+            "price": 234
+          }
+        ],
+        "price": null
+      },
+      {
+        "name": "26. Kebab Tallerken",
+        "description": "Kebabkjøtt, pommes frites, salat, valgfri saus.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 189
+          },
+          {
+            "name": "Stor",
+            "price": 224
+          }
+        ],
+        "price": null
+      },
+      {
+        "name": "Pitabrød",
+        "description": "Hjemmelaget pitabrød",
+        "price": 30
+      }
+    ]
+  },
+  {
+    "name": "Kebab Pita",
+    "items": [
+      {
+        "name": "28. Kebab i Pita",
+        "description": "Hjemmelaget pitabrød, kebabkjøtt, salat, valgfri saus.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 159
+          },
+          {
+            "name": "Stor",
+            "price": 194
+          }
+        ],
+        "price": null
+      },
+      {
+        "name": "32. Kylling Kebab i Pita",
+        "description": "Hjemmelaget pitabrød, kylling kebab, salat, valgfri saus.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 169
+          },
+          {
+            "name": "Stor",
+            "price": 204
+          }
+        ],
+        "price": null
+      },
+      {
+        "name": "Kebab i Pita Spesial",
+        "description": "Hjemmelaget pitabrød, kebabkjøtt, pommes frites, tomat, rødløk, salat, mais, agurk og valgfri saus",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 179
+          },
+          {
+            "name": "Stor",
+            "price": 214
+          }
+        ],
+        "price": null
+      },
+      {
+        "name": "Kylling kebab i Pita Spesial",
+        "description": "Hjemmelaget pitabrød, kyllingkebab, pommes frites, tomat, rødløk, salat, mais, agurk og valgfri saus.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 189
+          },
+          {
+            "name": "Stor",
+            "price": 224
+          }
+        ],
+        "price": null
+      },
+      {
+        "name": "Pitabrød",
+        "description": "Hjemmelaget pitabrød",
+        "price": 30
+      }
+    ]
+  },
+  {
+    "name": "Kebab Rull",
+    "items": [
+      {
+        "name": "27. Kebab Rull",
+        "description": "Hjemmelaget lefse, kebabkjøtt, salat, valgfri saus.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 169
+          },
+          {
+            "name": "Stor",
+            "price": 204
+          }
+        ],
+        "price": null
+      },
+      {
+        "name": "31. Kylling Kebab Rull",
+        "description": "Hjemmelaget lefse, kyllingkebab, salat, valgfri saus.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 179
+          },
+          {
+            "name": "Stor",
+            "price": 214
+          }
+        ],
+        "price": null
+      },
+      {
+        "name": "29. Kebab Rull Spesial",
+        "description": "Hjemmelaget lefse, kebabkjøtt, pommes, salat, valgfri saus.",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 189
+          },
+          {
+            "name": "Stor",
+            "price": 224
+          }
+        ],
+        "price": null
+      },
+      {
+        "name": "Kyllingkebabrull Spesial",
+        "description": "Hjemmelaget lefse, kyllingkebab, pommes frites, tomat, rødløk, salat, mais, agurk og valgfri saus",
+        "sizes": [
+          {
+            "name": "Medium",
+            "price": 199
+          },
+          {
+            "name": "Stor",
+            "price": 234
+          }
+        ],
+        "price": null
+      },
+      {
+        "name": "Pitabrød",
+        "description": "Hjemmelaget pitabrød",
+        "price": 30
       }
     ]
   },
   {
     "name": "Burger",
-    "name_en": "Burger",
     "items": [
       {
-        "name": "Bare Burger",
-        "description": "Burger med tomat, agurk, løk og salat.",
+        "name": "33. Bare Burger",
+        "description": "Tomat, agurk, løk, salat.",
         "sizes": [
           {
             "name": "100g",
@@ -179,11 +581,12 @@
             "name": "250g",
             "price": 130
           }
-        ]
+        ],
+        "price": null
       },
       {
-        "name": "Cheeseburger",
-        "description": "Burger med tomat, agurk, løk, salat og ost.",
+        "name": "34. Cheeseburger",
+        "description": "Tomat, agurk, løk, salat, ost.",
         "sizes": [
           {
             "name": "100g",
@@ -205,25 +608,22 @@
             "name": "250g",
             "price": 140
           }
-        ]
+        ],
+        "price": null
       },
       {
         "name": "Kyllingburger",
-        "description": "Burger med tomat, agurk, løk og salat."
-      },
-      {
-        "name": "Cheeseburger m/ Kylling",
-        "description": "Burger med tomat, agurk, løk, salat og ost."
+        "description": "Tomat, agurk, løk og salat.",
+        "price": 105
       }
     ]
   },
   {
     "name": "Burgermeny",
-    "name_en": "Burgermeny",
     "items": [
       {
-        "name": "Burgermeny",
-        "description": "Burger med tomat, agurk, løk, salat og pommes frites.",
+        "name": "Burger Meny",
+        "description": "Tomat, agurk, løk, salat, pommes frites.",
         "sizes": [
           {
             "name": "100g",
@@ -231,25 +631,26 @@
           },
           {
             "name": "160g",
-            "price": 170
-          },
-          {
-            "name": "190g",
-            "price": 175
-          },
-          {
-            "name": "Hjemmelaget 200g",
             "price": 180
           },
           {
+            "name": "190g",
+            "price": 200
+          },
+          {
+            "name": "Hjemmelaget 200g",
+            "price": 220
+          },
+          {
             "name": "250g",
-            "price": 190
+            "price": 210
           }
-        ]
+        ],
+        "price": null
       },
       {
         "name": "Cheeseburger Meny",
-        "description": "Burger med tomat, agurk, løk, salat, ost og pommes frites.",
+        "description": "Tomat, agurk, løk, salat, ost, pommes frites.",
         "sizes": [
           {
             "name": "100g",
@@ -257,305 +658,409 @@
           },
           {
             "name": "160g",
-            "price": 190
-          },
-          {
-            "name": "190g",
-            "price": 195
-          },
-          {
-            "name": "Hjemmelaget 200g",
             "price": 200
           },
           {
+            "name": "190g",
+            "price": 220
+          },
+          {
+            "name": "Hjemmelaget 200g",
+            "price": 230
+          },
+          {
             "name": "250g",
-            "price": 210
+            "price": 240
           }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Barnemeny",
-    "name_en": "Barnemeny",
-    "items": [
-      {
-        "name": "Barne Skinke Pizza",
-        "description": "Pizza med skinke, tomatsaus og ost."
+        ],
+        "price": null
       },
       {
-        "name": "Barne Pølse Pommes Frites",
-        "description": "Wiener pølse serveres på ett brett med pommes frites"
-      },
-      {
-        "name": "Barne Pepperoni Pizza",
-        "description": "Pizza med pepperoni, tomatsaus og ost."
-      },
-      {
-        "name": "Barne Kyllingnuggets",
-        "description": "5 stk. Serveres med kyllingnuggets, pommes og salat."
-      },
-      {
-        "name": "Barne Margherita",
-        "description": "Pizza med tomatsaus og ost."
-      }
-    ]
-  },
-  {
-    "name": "Kebabtallerken",
-    "name_en": "Kebabtallerken",
-    "items": [
-      {
-        "name": "Kyllingkebabtallerken",
-        "description": "Serveres med kyllingkebab, pommes, salat og valgfri saus."
-      },
-      {
-        "name": "Kebabtallerken",
-        "description": "Serveres med kebabkjøtt, pommes frites, salat og valgfri saus."
-      }
-    ]
-  },
-  {
-    "name": "Kebabrull",
-    "name_en": "Kebabrull",
-    "items": [
-      {
-        "name": "Kebabrull Spesial",
-        "description": "Serveres med hjemmelaget lefse, kebabkjøtt, pommes, salat og valgfri saus."
-      },
-      {
-        "name": "Kyllingkebabrull Spesial",
-        "description": "Serveres med hjemmelaget lefse, kyllingkebab, pommes frites, tomat, rødløk, salat, mais, agurk og valgfri saus."
+        "name": "Kylling Tallerken",
+        "description": "Tomat, agurk, løk, salat, pommes frites.",
+        "price": 140
       }
     ]
   },
   {
     "name": "Tallerken",
-    "name_en": "Tallerken",
     "items": [
       {
-        "name": "Løvstek Tallerken",
-        "description": "Serveres med løvstek, pommes, salat og bernaisesaus."
+        "name": "35. Løvstek Tallerken",
+        "description": "Løvstek, pommes, salat, bærnaisesaus.",
+        "price": 160
       },
       {
-        "name": "Biffsnadder Tallerken",
-        "description": "Serveres med strimlet biff, stekt grønnsaker, pommes, salat og bernaisesaus."
+        "name": "36. Biffsnadder Tallerken",
+        "description": "Strimlet biff, stekte grønnsaker, pommes, salat, bærnaisesaus.",
+        "price": 205
       },
       {
-        "name": "Kyllingnuggets Tallerken",
-        "description": "10 stk. Serveres med kyllingnuggets, pommes, salat og søt chilisaus."
+        "name": "37. Kyllingsnadder Tallerken",
+        "description": "Marinert kyllingfile, stekte grønnsaker, pommes, salat, bærnaisesaus.",
+        "price": 205
       },
       {
-        "name": "Kyllingsnadder Tallerken",
-        "description": "Serveres med marinert kyllingfilet, stekt grønnsaker, pommes, salat og bernaisesaus."
+        "name": "38. 10 stk. Kyllingnuggets",
+        "description": "10 stk. kyllingnuggets, pommes, salat, søt chilisaus.",
+        "price": 175
       }
     ]
   },
   {
-    "name": "Sides",
-    "name_en": "Sides",
+    "name": "Pommes frites",
     "items": [
       {
         "name": "Kyllingnuggets",
-        "description": "Sprø og panerte biter av kyllingkjøtt som friteres til de er gylne.",
+        "description": "Velg antall kyllingnuggets",
         "sizes": [
           {
-            "name": "3 stk",
+            "name": "3 stk Kyllingnuggets",
             "price": 33
           },
           {
-            "name": "5 stk",
+            "name": "5 stk Kyllingnuggets",
             "price": 55
           },
           {
-            "name": "8 stk",
+            "name": "8 stk Kyllingnuggets",
             "price": 88
           },
           {
-            "name": "10 stk",
+            "name": "10 stk Kyllingnuggets",
             "price": 110
           },
           {
-            "name": "15 stk",
+            "name": "15 stk Kyllingnuggets",
             "price": 165
           },
           {
-            "name": "20 stk",
+            "name": "20 stk Kyllingnuggets",
             "price": 220
           }
-        ]
+        ],
+        "price": null
       },
       {
         "name": "Løkringer",
-        "description": "Klassisk ringer av løk som er dyppet i en krydret røre og fritert.",
+        "description": "Velg antall løkringer",
         "sizes": [
           {
-            "name": "3 stk",
+            "name": "3 stk Løkringer",
             "price": 24
           },
           {
-            "name": "6 stk",
+            "name": "6 stk løkringer",
             "price": 48
           },
           {
-            "name": "10 stk",
+            "name": "10 stk løkringer",
             "price": 80
           },
           {
-            "name": "15 stk",
+            "name": "15 stk løkringer",
             "price": 120
           },
           {
-            "name": "20 stk",
+            "name": "20 stk løkringer",
             "price": 160
           }
-        ]
+        ],
+        "price": null
       },
       {
-        "name": "Mozzarella Sticks",
-        "description": "Staver av mozzarellaost som er panert og fritert slik at osten blir smeltet og trådete inni.",
+        "name": "Mozzarella sticks",
+        "description": "Velg antall mozzarella sticks",
         "sizes": [
           {
-            "name": "3 stk",
+            "name": "3 stk mozzarella sticks",
             "price": 39
           },
           {
-            "name": "6 stk",
+            "name": "6 stk mozzarella sticks",
             "price": 78
           },
           {
-            "name": "10 stk",
+            "name": "10 stk mozzarella sticks",
             "price": 130
           },
           {
-            "name": "15 stk",
+            "name": "15 stk mozzarella sticks",
             "price": 195
+          },
+          {
+            "name": "20 stk mozzarella stic",
+            "price": 260
           }
-        ]
+        ],
+        "price": null
       },
       {
-        "name": "Pommes Frites",
-        "description": "Klassisk fritert potetstaver og saltet."
+        "name": "Chili & Cheese Nuggets",
+        "description": "Velg antall Chili & Cheese Nuggets",
+        "sizes": [
+          {
+            "name": "3 stk Chili & Cheese Nuggets",
+            "price": 33
+          },
+          {
+            "name": "6 stk Chili & Cheese Nuggets",
+            "price": 66
+          },
+          {
+            "name": "10 stk Chili & Cheese Nuggets",
+            "price": 110
+          },
+          {
+            "name": "15 stk Chili & Cheese Nuggets",
+            "price": 165
+          },
+          {
+            "name": "20 stk Chili & Cheese Nuggets",
+            "price": 220
+          }
+        ],
+        "price": null
+      },
+      {
+        "name": "Pommes frites: Stor",
+        "description": "",
+        "price": 65
+      },
+      {
+        "name": "Pommes frites: Liten",
+        "description": "",
+        "price": 55
       }
     ]
   },
   {
     "name": "Dipper",
-    "name_en": "Dipper",
     "items": [
       {
         "name": "Bearnaisesaus",
-        "description": "En klassisk, fyldig og kremet saus med smak av estragon og sjalottløk."
+        "description": "",
+        "price": 25
       },
       {
-        "name": "Sterk Saus",
-        "description": "Basert på chili og krydder."
+        "name": "Sterksaus",
+        "description": "",
+        "price": 25
       },
       {
         "name": "Hvitløksaus",
-        "description": "Hvit dressing laget med mye hvitløk og urter."
+        "description": "",
+        "price": 25
       },
       {
         "name": "Ketchup",
-        "description": "Klassisk tomatsaus med en søt og syrlig profil."
+        "description": "",
+        "price": 25
       },
       {
         "name": "Mild Saus",
-        "description": "En rund og rømme saus med mild smaker."
+        "description": "",
+        "price": 25
       },
       {
         "name": "Medium Saus",
-        "description": "Blanding mellom mild saus og sterk saus."
+        "description": "",
+        "price": 25
       }
     ]
   },
   {
-    "name": "Drikke",
-    "name_en": "Drikke",
+    "name": "Salat",
     "items": [
       {
-        "name": "Coca-Cola",
-        "description": ""
+        "name": "42. Vegetar Salat",
+        "description": "Alle salater er med hjemmelaget nybakt brød. Ferske grønnsaker, mozzarella ost, hvitløksaus.",
+        "price": 155
       },
       {
-        "name": "Coca-Cola Zero",
-        "description": ""
+        "name": "41. Kebab Salat",
+        "description": "Alle salater er med hjemmelaget nybakt brød. Kebabkjøtt, ferske grønnsaker, hvitløksaus.",
+        "price": 155
       },
       {
-        "name": "Fanta Orange",
-        "description": ""
+        "name": "40. Kylling Salat",
+        "description": "Alle salater er med hjemmelaget nybakt brød. Marinert kyllingfile ferske grønnsaker, hvitløksaus.",
+        "price": 155
+      }
+    ]
+  },
+  {
+    "name": "Barnemeny",
+    "items": [
+      {
+        "name": "46. Skinke pizza",
+        "description": "",
+        "price": 105
       },
       {
-        "name": "Fanta Exotic",
-        "description": ""
+        "name": "44. Pølse-pommes Frites",
+        "description": "",
+        "price": 105
       },
       {
-        "name": "Sprite",
-        "description": ""
+        "name": "47. Pepperoni Pizza",
+        "description": "Tomatsaus, ost og pepperoni.",
+        "price": 105
       },
       {
-        "name": "Urge",
-        "description": ""
+        "name": "45. 5 stk. Kyllingnuggets",
+        "description": "5 stk. kyllingnuggets, pommes, salat.",
+        "price": 105
       },
       {
-        "name": "Solo",
-        "description": "0,5l."
+        "name": "48. Margarita",
+        "description": "Tomatsaus og ost.",
+        "price": 95
+      }
+    ]
+  },
+  {
+    "name": "Drikke 0,5 l",
+    "items": [
+      {
+        "name": "Coca Cola 0.5",
+        "description": "",
+        "price": 40
       },
       {
-        "name": "Pepsi Max",
-        "description": ""
+        "name": "Coca Cola Zero 0.5",
+        "description": "",
+        "price": 40
+      },
+      {
+        "name": "Fanta Orange 0.5",
+        "description": "",
+        "price": 40
+      },
+      {
+        "name": "Sprite 0.5",
+        "description": "",
+        "price": 40
+      },
+      {
+        "name": "Urge 0.5",
+        "description": "",
+        "price": 40
+      },
+      {
+        "name": "Solo 0.5",
+        "description": "",
+        "price": 40
+      },
+      {
+        "name": "Pepsi Max 0.5",
+        "description": "",
+        "price": 40
       },
       {
         "name": "Mountain Dew",
-        "description": "0,5l."
-      },
-      {
-        "name": "Imsdal Vann",
-        "description": "0,5l."
+        "description": "",
+        "price": 40
       },
       {
         "name": "Solrik Appelsin",
-        "description": "0,25l."
+        "description": "",
+        "price": 35
       },
       {
         "name": "Solrik Jordbær",
-        "description": "0,25l."
+        "description": "",
+        "price": 35
       },
       {
         "name": "Sjokomelk",
-        "description": "0,25l."
+        "description": "",
+        "price": 35
+      }
+    ]
+  },
+  {
+    "name": "Drikke 1,5 L",
+    "items": [
+      {
+        "name": "Pepsi Max 1.5",
+        "description": "",
+        "price": 60
       },
       {
-        "name": "Solo Super",
-        "description": "1,5l."
+        "name": "Fanta Exotic 1.5",
+        "description": "",
+        "price": 60
       },
+      {
+        "name": "Urge 1.5",
+        "description": "",
+        "price": 60
+      },
+      {
+        "name": "Solo Super 1.5",
+        "description": "",
+        "price": 60
+      },
+      {
+        "name": "Fanta Orange 1.5",
+        "description": "",
+        "price": 60
+      },
+      {
+        "name": "Coca Cola 1.5",
+        "description": "",
+        "price": 60
+      },
+      {
+        "name": "Coca Cola Zero 1.5",
+        "description": "",
+        "price": 60
+      },
+      {
+        "name": "Sprite 1.5",
+        "description": "",
+        "price": 60
+      }
+    ]
+  },
+  {
+    "name": "Energidrikker",
+    "items": [
       {
         "name": "Monster Ultra White",
-        "description": "0,5l."
+        "description": "",
+        "price": 45
       },
       {
         "name": "Monster Mango Loco",
-        "description": "0,5l."
+        "description": "",
+        "price": 45
       },
       {
         "name": "Monster Energy",
-        "description": "0,5l."
+        "description": "",
+        "price": 45
       },
       {
         "name": "Monster Juiced",
-        "description": "0,5l."
+        "description": "",
+        "price": 45
       },
       {
         "name": "Monster Punch",
-        "description": "0,5l."
+        "description": "",
+        "price": 45
       },
       {
         "name": "Monster Energy Drink Rosa Ultra",
-        "description": "0,5l."
+        "description": "",
+        "price": 45
       },
       {
         "name": "Red Bull",
-        "description": "0,3l."
+        "description": "",
+        "price": 45
       }
     ]
   }
