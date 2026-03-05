@@ -7,9 +7,9 @@ import { API } from '../config/api';
 
 const LOGO_URL = "/oscars-pizzeria-logo.png";
 const HERO_BG = "/hero-food-bg.png";
-const BURGER_IMG = "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80";
-const PIZZA_IMG = "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80";
-const KEBAB_IMG = "https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=600&q=80";
+const BURGER_IMG = "/category-burger.png";
+const PIZZA_IMG = "/category-pizza.png";
+const KEBAB_IMG = "/category-kebab.png";
 
 const categories = [
   { name: 'Burger', name_en: 'Burger', image: BURGER_IMG },
