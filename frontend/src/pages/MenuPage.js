@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, X } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import axios from 'axios';
-import { API } from '../config/api';
 import { ORDER_LINKS } from '../config/orderLinks';
+import menuData from '../data/menu.json';
 
 export const MenuPage = () => {
   const { t, language } = useLanguage();
@@ -13,16 +12,7 @@ export const MenuPage = () => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   useEffect(() => {
-    const fetchMenu = async () => {
-      try {
-        const response = await axios.get(`${API}/menu`);
-        const data = response?.data;
-        setMenu(Array.isArray(data) ? data : []);
-      } catch {
-        setMenu([]);
-      }
-    };
-    fetchMenu();
+    setMenu(Array.isArray(menuData) ? menuData : []);
   }, []);
 
   const menuArray = Array.isArray(menu) ? menu : [];

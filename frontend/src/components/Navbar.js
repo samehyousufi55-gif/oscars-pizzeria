@@ -26,19 +26,21 @@ export const Navbar = () => {
 
   const isActive = (path) => location.pathname === path;
 
+  const isHome = location.pathname === '/';
+  const forceDarkText = !isHome;
+  const navbarBgClass = scrolled || forceDarkText ? 'navbar-glass shadow-sm bg-white' : 'bg-transparent';
+
   return (
-    <nav 
+    <nav
       data-testid="navbar"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'navbar-glass shadow-sm' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navbarBgClass}`}
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" data-testid="logo-link" className="flex items-center">
-            <img 
-              src={LOGO_URL} 
-              alt="Oscars Pizzeria" 
+            <img
+              src={LOGO_URL}
+              alt="Oscars Pizzeria"
               className="h-14 w-auto"
             />
           </Link>
@@ -49,11 +51,10 @@ export const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 data-testid={`nav-link-${link.label.toLowerCase()}`}
-                className={`text-sm font-medium transition-colors ${
-                  isActive(link.path) 
-                    ? scrolled ? 'text-black' : 'text-white' 
-                    : scrolled ? 'text-gray-600 hover:text-black' : 'text-white/80 hover:text-white'
-                }`}
+                className={`text-sm font-medium transition-colors ${isActive(link.path)
+                    ? (scrolled || forceDarkText) ? 'text-black' : 'text-white'
+                    : (scrolled || forceDarkText) ? 'text-gray-600 hover:text-black' : 'text-white/80 hover:text-white'
+                  }`}
               >
                 {link.label}
               </Link>
@@ -61,22 +62,21 @@ export const Navbar = () => {
           </div>
 
           <div className="hidden sm:flex items-center gap-4">
-            <a 
+            <a
               href="tel:+4747737347"
-              className={`flex items-center gap-2 text-sm font-medium ${scrolled ? 'text-gray-700' : 'text-white'}`}
+              className={`flex items-center gap-2 text-sm font-medium ${(scrolled || forceDarkText) ? 'text-gray-700' : 'text-white'}`}
             >
               <Phone className="w-4 h-4" />
               47 73 73 47
             </a>
-            
+
             <button
               onClick={toggleLanguage}
               data-testid="language-toggle"
-              className={`flex items-center gap-1 px-3 py-2 rounded-full text-sm font-medium transition-colors ${
-                scrolled 
-                  ? 'bg-gray-100 text-gray-700 hover:bg-gray-200' 
+              className={`flex items-center gap-1 px-3 py-2 rounded-full text-sm font-medium transition-colors ${(scrolled || forceDarkText)
+                  ? 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   : 'bg-white/20 text-white hover:bg-white/30'
-              }`}
+                }`}
             >
               <Globe className="w-4 h-4" />
               {language.toUpperCase()}
@@ -95,7 +95,7 @@ export const Navbar = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             data-testid="mobile-menu-button"
-            className={`sm:hidden p-2 ${scrolled ? 'text-gray-700' : 'text-white'}`}
+            className={`sm:hidden p-2 ${(scrolled || forceDarkText) ? 'text-gray-700' : 'text-white'}`}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -110,14 +110,13 @@ export const Navbar = () => {
                   to={link.path}
                   onClick={() => setIsOpen(false)}
                   data-testid={`mobile-nav-link-${link.label.toLowerCase()}`}
-                  className={`py-3 px-4 rounded-xl text-lg font-medium ${
-                    isActive(link.path) ? 'bg-gray-100 text-black' : 'text-gray-700 hover:bg-gray-50'
-                  }`}
+                  className={`py-3 px-4 rounded-xl text-lg font-medium ${isActive(link.path) ? 'bg-gray-100 text-black' : 'text-gray-700 hover:bg-gray-50'
+                    }`}
                 >
                   {link.label}
                 </Link>
               ))}
-              
+
               <div className="flex items-center gap-3 mt-4 pt-4 border-t">
                 <button
                   onClick={toggleLanguage}
@@ -126,7 +125,7 @@ export const Navbar = () => {
                   <Globe className="w-4 h-4" />
                   {language.toUpperCase()}
                 </button>
-                
+
                 <a
                   href="https://order.ninito.com/no/group/oscars-pizzeria/holter"
                   target="_blank"
