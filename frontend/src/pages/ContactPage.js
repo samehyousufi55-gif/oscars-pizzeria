@@ -22,8 +22,16 @@ export const ContactPage = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.error || t('messageError'));
+
+      let data = {};
+      try {
+        data = await response.json();
+      } catch (_) { }
+
+      if (!response.ok) {
+        throw new Error(data.error || t('messageError'));
+      }
+
       toast.success(t('messageSent'));
       setFormData({ name: '', phone: '', email: '', message: '' });
     } catch (error) {
