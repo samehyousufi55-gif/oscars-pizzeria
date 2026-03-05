@@ -17,17 +17,17 @@ const CATEGORY_IMAGES = {
   'Calzone': '/images/categories/Calzone.jpg',
   'Kebab Tallerken': '/images/categories/Kylling kebab tallerken.jpg',
   'Tallerken': '/images/categories/KYLLINGSNADDER TALLERKEN.jpg',
-  'Kebab Pita': 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=200',
-  'Kebab Rull': 'https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&q=80&w=200',
+  'Kebab Pita': '/images/categories/Kebab Pita.jpg',
+  'Kebab Rull': '/images/categories/Kebab Rull.jpg',
   'Burger': '/images/categories/Cheeseburger Many.jpg',
   'Burgermeny': '/images/categories/Cheeseburger Many.jpg',
   'Pommes frites': '/images/categories/Liten pommes frites.jpg',
   'Salat': '/images/categories/42. Vegetar salat.jpg',
-  'Dipper': 'https://images.unsplash.com/photo-1472476449509-f9f30b2c1240?auto=format&fit=crop&q=80&w=200',
-  'Barnemeny': 'https://images.unsplash.com/photo-1625938146369-adc83368bda7?auto=format&fit=crop&q=80&w=200',
+  'Dipper': '/images/categories/Dipper.jpg',
+  'Barnemeny': '/images/categories/Barnemeny.jpg',
   'Drikke 0,5 l': '/images/categories/drikke kategoripng.png',
   'Drikke 1,5 L': '/images/categories/drikke kategoripng.png',
-  'Energidrikker': '/images/categories/drikke kategoripng.png',
+  'Energidrikker': '/images/categories/energidrikk kategori.png',
   'default': 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&q=80&w=200'
 };
 
@@ -227,7 +227,14 @@ export const MenuPage = () => {
                         <div
                           key={i}
                           className="bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 p-6 flex flex-col justify-between group cursor-pointer border border-gray-50"
-                          onClick={() => setSelectedItem(item)}
+                          onClick={() => {
+                            if (item.sizes) {
+                              setSelectedItem(item);
+                            } else {
+                              // Hvis den ikke har "sizes" (kun én størrelse/pris), hopp direkte til Ninito-bestilling!
+                              window.open(ORDER_LINKS.ninito, '_blank');
+                            }
+                          }}
                         >
                           <div>
                             <div className="flex justify-between items-start mb-2 gap-4">
