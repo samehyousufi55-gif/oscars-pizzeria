@@ -84,39 +84,30 @@ export const MenuPage = () => {
           <div className="space-y-12">
             {filteredMenu?.map((category) => (
               <section key={category.name} id={`category-${category.name}`} className="bg-white rounded-2xl card-shadow p-6 md:p-8">
-                {category.image && (
-                  <img src={category.image} alt={category.name} className="w-full h-48 md:h-64 object-cover rounded-xl mb-6 shadow-sm" />
-                )}
                 <h2 className="font-heading text-2xl md:text-3xl text-gray-900 mb-6">
                   {language === 'no' ? category.name : (category.name_en || category.name)}
                 </h2>
-                <div className="space-y-2">
+                <div className="space-y-4">
                   {(category.items || []).map((item, i) => (
                     <div
                       key={i}
-                      className={`menu-card flex flex-col sm:flex-row justify-between items-start border-b border-gray-100 pb-4 last:border-0 p-2 md:p-4 rounded-xl transition-all duration-200 ${item.sizes ? 'cursor-pointer hover:bg-orange-50/50 hover:shadow-sm group' : ''}`}
+                      className={`menu-card flex justify-between items-start border-b border-gray-100 pb-4 last:border-0 ${item.sizes ? 'cursor-pointer hover:bg-gray-50 transition-colors' : ''}`}
                       onClick={() => item.sizes ? setSelectedItem(item) : null}
                     >
-                      <div className="flex gap-4 md:gap-6 items-start w-full">
-                        {item.image && (
-                          <img src={item.image} alt={item.name} className="w-20 h-20 md:w-24 md:h-24 object-cover rounded-xl flex-shrink-0 shadow-sm" />
+                      <div>
+                        <h3 className="font-semibold text-gray-900">
+                          {item.name}
+                        </h3>
+                        {item.description && <p className="text-gray-500 text-sm mt-1">{item.description}</p>}
+                        {item.sizes && (
+                          <p className="text-xs font-medium text-orange-600 mt-1">
+                            Klikk for å se størrelser
+                          </p>
                         )}
-                        <div className="flex-1 pr-4">
-                          <h3 className={`font-semibold text-gray-900 ${item.sizes ? 'group-hover:text-orange-600 transition-colors' : ''}`}>
-                            {item.name}
-                          </h3>
-                          {item.description && <p className="text-gray-500 text-sm mt-1">{item.description}</p>}
-
-                          {item.sizes && (
-                            <span className="inline-block mt-2 text-xs font-medium bg-gray-100 text-gray-600 px-2 py-1 rounded-md">
-                              Flere størrelser tilgjengelig
-                            </span>
-                          )}
-                        </div>
-                        <span className="price-tag text-lg font-bold text-gray-900 whitespace-nowrap mt-1 self-start">
-                          {item.sizes ? `fra ${Math.min(...item.sizes.map((s) => s.price))} kr` : `${item.price} kr`}
-                        </span>
                       </div>
+                      <span className="price-tag text-lg ml-4 whitespace-nowrap">
+                        {item.sizes ? `fra ${Math.min(...item.sizes.map((s) => s.price))} kr` : `${item.price} kr`}
+                      </span>
                     </div>
                   ))}
                 </div>
