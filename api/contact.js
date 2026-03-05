@@ -23,10 +23,14 @@ module.exports = async (req, res) => {
   }
 
   try {
+    // Bruk miljøvariabler fra Vercel (SENDER_EMAIL og RECIPIENT_EMAIL)
+    const senderEmail = process.env.SENDER_EMAIL || 'noreply@oscarspizzeria.no';
+    const recipientEmail = process.env.RECIPIENT_EMAIL || process.env.RESEND_TO_EMAIL || 'post@swiftskillsgroup.com';
+
     // Resend SDK returnerer { data, error } - vi MÅ sjekke begge
     const { data, error } = await resend.emails.send({
-      from: 'Oscars Pizzeria <noreply@oscarspizzeria.no>',
-      to: ['post@swiftskillsgroup.com'],
+      from: `Oscars Pizzeria <${senderEmail}>`,
+      to: [recipientEmail],
       replyTo: email,
       subject: `Ny melding fra ${name} - Oscars Pizzeria`,
       html: `
