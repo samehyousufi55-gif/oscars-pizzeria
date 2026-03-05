@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import { LanguageProvider } from './context/LanguageContext';
 import { SEO } from './components/SEO';
+import { ScrollToTop } from './components/ScrollToTop';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
@@ -16,6 +17,7 @@ function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <SEO />
         <div className="App min-h-screen flex flex-col bg-[#FAFAF8]">
           <Navbar />
