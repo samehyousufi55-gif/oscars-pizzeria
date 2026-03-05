@@ -15,7 +15,8 @@
             "price": 210
           }
         ],
-        "price": null
+        "price": null,
+        "image": "/images/products/1.Margrethe.jpg"
       },
       {
         "name": "02. Napoli",
@@ -30,7 +31,8 @@
             "price": 220
           }
         ],
-        "price": null
+        "price": null,
+        "image": "/images/products/2.Napoli.jpg"
       },
       {
         "name": "03. Pepperoni",
@@ -45,7 +47,8 @@
             "price": 225
           }
         ],
-        "price": null
+        "price": null,
+        "image": "/images/products/3.Pepperoni.jpg"
       },
       {
         "name": "04. Capri",
@@ -75,7 +78,8 @@
             "price": 230
           }
         ],
-        "price": null
+        "price": null,
+        "image": "/images/products/5.Hawaii.jpg"
       },
       {
         "name": "06. Hazel",
@@ -150,7 +154,8 @@
             "price": 285
           }
         ],
-        "price": null
+        "price": null,
+        "image": "/images/products/10.India.jpg"
       },
       {
         "name": "11. Kylling Pizza",
