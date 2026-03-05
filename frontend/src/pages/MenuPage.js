@@ -6,7 +6,8 @@ import {
   Search,
   ChevronLeft,
   ChevronRight,
-  Loader2
+  Loader2,
+  ArrowUp
 } from 'lucide-react';
 import { ORDER_LINKS } from '../config/orderLinks';
 import menuData from '../data/menu.json';
@@ -40,6 +41,7 @@ export const MenuPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedItem, setSelectedItem] = useState(null);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const scrollContainerRef = useRef(null);
 
@@ -49,7 +51,17 @@ export const MenuPage = () => {
       setMenu(Array.isArray(menuData) ? menuData : []);
       setLoading(false);
     }, 400);
-    return () => clearTimeout(timer);
+
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const menuArray = Array.isArray(menu) ? menu : [];
@@ -123,48 +135,50 @@ export const MenuPage = () => {
           <>
             {/* 3. Kategorifilter */}
             {menuArray.length > 0 && categories.length > 1 && (
-              <div className="relative mb-12 flex items-center max-w-full">
-                <button
-                  onClick={scrollLeft}
-                  className="hidden md:flex absolute -left-4 z-10 w-10 h-10 bg-white rounded-full shadow-md items-center justify-center text-gray-600 hover:text-black hover:bg-gray-50 transition-colors"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-
-                <div
-                  ref={scrollContainerRef}
-                  className="flex overflow-x-auto scrollbar-hide py-2 px-1 gap-3 mx-auto w-full snap-x"
-                  style={{ scrollBehavior: 'smooth' }}
-                >
+              <div className="sticky top-[80px] z-40 bg-[#FAFAF8]/95 backdrop-blur-md pb-4 pt-2 mb-8 -mx-4 px-4 sm:mx-0 sm:px-0 border-b border-gray-100">
+                <div className="relative flex items-center max-w-full">
                   <button
-                    onClick={() => setActiveCategory('all')}
-                    className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-medium transition-colors border snap-start shrink-0 ${activeCategory === 'all'
+                    onClick={scrollLeft}
+                    className="hidden md:flex absolute -left-4 z-10 w-10 h-10 bg-white rounded-full shadow-md items-center justify-center text-gray-600 hover:text-black hover:bg-gray-50 transition-colors"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+
+                  <div
+                    ref={scrollContainerRef}
+                    className="flex overflow-x-auto scrollbar-hide py-2 px-1 gap-3 mx-auto w-full snap-x"
+                    style={{ scrollBehavior: 'smooth' }}
+                  >
+                    <button
+                      onClick={() => setActiveCategory('all')}
+                      className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-medium transition-colors border snap-start shrink-0 ${activeCategory === 'all'
                         ? 'bg-[#1a1a1a] text-white border-[#1a1a1a]'
                         : 'bg-white text-gray-600 border-gray-200 hover:border-gray-300 hover:text-gray-900'
-                      }`}
-                  >
-                    {t('menu')}
-                  </button>
-                  {categories.map((cat) => (
-                    <button
-                      key={cat.key}
-                      onClick={() => setActiveCategory(cat.key)}
-                      className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-medium transition-colors border snap-start shrink-0 ${activeCategory === cat.key
-                          ? 'bg-[#1a1a1a] text-white border-[#1a1a1a]'
-                          : 'bg-white text-gray-600 border-gray-200 hover:border-gray-300 hover:text-gray-900'
                         }`}
                     >
-                      {cat.name}
+                      {t('menu')}
                     </button>
-                  ))}
-                </div>
+                    {categories.map((cat) => (
+                      <button
+                        key={cat.key}
+                        onClick={() => setActiveCategory(cat.key)}
+                        className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-medium transition-colors border snap-start shrink-0 ${activeCategory === cat.key
+                          ? 'bg-[#1a1a1a] text-white border-[#1a1a1a]'
+                          : 'bg-white text-gray-600 border-gray-200 hover:border-gray-300 hover:text-gray-900'
+                          }`}
+                      >
+                        {cat.name}
+                      </button>
+                    ))}
+                  </div>
 
-                <button
-                  onClick={scrollRight}
-                  className="hidden md:flex absolute -right-4 z-10 w-10 h-10 bg-white rounded-full shadow-md items-center justify-center text-gray-600 hover:text-black hover:bg-gray-50 transition-colors"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
+                  <button
+                    onClick={scrollRight}
+                    className="hidden md:flex absolute -right-4 z-10 w-10 h-10 bg-white rounded-full shadow-md items-center justify-center text-gray-600 hover:text-black hover:bg-gray-50 transition-colors"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
               </div>
             )}
 
@@ -325,6 +339,17 @@ export const MenuPage = () => {
           </div>
         </div>
       )}
+
+      {/* 8. Scroll til topp knapp */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className={`fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[60] p-4 bg-[#1a1a1a] text-white rounded-full shadow-2xl hover:bg-black hover:-translate-y-1 transition-all duration-300 ${showScrollTop ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0 pointer-events-none'
+          }`}
+        aria-label="Scroll til topp"
+      >
+        <ArrowUp className="w-6 h-6" />
+      </button>
+
     </div>
   );
 };
